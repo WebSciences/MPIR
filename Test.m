@@ -32,7 +32,8 @@ topic=101:150;
 
 for l=0.1:0.1:0.9
 for i=101:150
-    %Step 1: for each topic, load relevance score and covariance matrix for rank@1-200 documents 
+    
+%Step 1: for each topic, load relevance score and covariance matrix for rank@1-200 documents 
 
     path=strcat('c:\WT10G\',num2str(i),'.txt');
     data=load(path);
@@ -42,7 +43,7 @@ for i=101:150
     scores=(scores-min(scores))/(max(scores)-min(scores));
     covarianceMatrix=Covariance{i-100};
 
-    %step 2: run algorithm, choose the optimal ranking action for rank 1:selectNum.
+%Step 2: run re-ranking algorithm, choose the optimal ranking action from rank 1 to selectNum.
     index=1:rank;
     select=[];
     %%lastStep=0;
@@ -55,7 +56,6 @@ for i=101:150
         act=find(value==max(value));
         select=[select,act]
         index(find(index==act))=[];
-        %%lastStep=ValueFuntion(scores,covarianceMatrix,select);
     end
 
     % output result:   
@@ -69,7 +69,6 @@ filename=strcat('Result0_',num2str(l));
 save(filename,'Result','optimalDesicion');
 end
 
-%save 'Result0_4' Result optimalDesicion;
 
 
 

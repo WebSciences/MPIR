@@ -1,6 +1,17 @@
 function value=ValueFuntion2(meanVector,covarianceMatrix,action,alpha)
 
 % Value function with tunring parameter
+%{
+This function is used to compute the value function for the given belief state and action.
+Input: meanVector -- the relevance score of ranked documents
+	 covarianceMatrix -- the similarity matrix
+	 action -- re-ranking in the first page
+	 alpha -- tunring parameter
+Output: The expected total return
+}%
+
+	
+
 global num;
 global top;
 global weight;
