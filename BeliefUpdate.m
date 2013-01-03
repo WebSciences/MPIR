@@ -2,10 +2,11 @@ function [meanUpdated,covarianceUpdated]=BeliefUpdate(meanVector,covarianceMatri
 
 %{ This function is used to compute the conditional distribution given the relevance feedback of some documents.
 
-Input: feedbackInf is a K*2 matrix. The first row contains the relevance scores provided by the user; the second row contatins the index of documents which were judged by the user .
+Input: feedbackInf is a K*2 matrix (K is the number of feedback). The first row presents the relevance scores provided by the user; the second row show the corresponding index.
 
 Output: updated belief state
 
+Note: The documents in the first page are exculded from the output meanvector and covariance matrix.
 }%
 
 

@@ -1,4 +1,15 @@
 function metrics=metric1(rankedList,relevance)
+%{
+
+Function: Calculate recall,precision,NDCG and MRR
+
+Input: Ranking and relevance scores
+
+Output: metrics
+
+}%
+
+
 right=0;
 recall=0;
 precision=0;

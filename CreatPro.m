@@ -1,4 +1,5 @@
 function [judgement,prob]=CreatPro(sample,scale)
+
 [n,selectNum]=size(sample);
 global gridMatrix;
 

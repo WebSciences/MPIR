@@ -1,4 +1,5 @@
 function covariance=Correlation2Covariance(variance,correlation)
+% Function: convert similarity measures to a covariance matrix
 l=size(correlation);
 covariance=zeros(l);
 for i=1:l
