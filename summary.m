@@ -1,6 +1,7 @@
 load('Covariance')
 Output=[];
 
+% Compute the metrics for both first and second pages for tunring paramter from 0 to 0.9
 for j=0:9
     filename=strcat('Result0_',num2str(j));
     load(filename);
@@ -22,6 +23,9 @@ for j=0:9
     Output=[Output;result./50];
 end
 
+%%%%%%%%%%%%%%%%%%
+% Compute the metrics for both first and second pages using conventional algorithm
+% The first page
 result=zeros(2,4);
 for i=101:150
     %if isempty(Result{i})==0
@@ -38,6 +42,7 @@ for i=101:150
 end
 Output=[Output;result./50];
 
+% The second page
 result=zeros(1,4);
 for i=101:150
     %if isempty(Result{i})==0
