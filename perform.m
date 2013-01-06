@@ -3,12 +3,12 @@ function result=perform(meanVector,covarianceMatrix,action,relevance)
 	Function: Perform 2-period IR
 
 	Input: 	meanvector-- BM25 score
-            	Covariance matrix
+            Covariance matrix
 			action -- the index of document ranked in the first page
 			relevance -- true relevance scores
 
 	Output:	metrics for both first and second stage
-}%
+%}
 
 rankedList=ChangeAction2RankList(action,length(meanVector));
 

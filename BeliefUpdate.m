@@ -7,7 +7,7 @@ Input: feedbackInf is a K*2 matrix (K is the number of feedback). The first row 
 Output: updated belief state
 
 Note: The documents in the first page are exculded from the output meanvector and covariance matrix.
-}%
+%}
 
 
 docNumber=length(meanVector);

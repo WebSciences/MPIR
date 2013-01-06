@@ -10,7 +10,7 @@ Input: meanVector -- the relevance score of ranked documents
 	 alpha -- tunring parameter
 
 Output: The expected total return
-}%
+%}
 
 	
 

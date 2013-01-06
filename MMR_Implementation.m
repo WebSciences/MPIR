@@ -8,7 +8,7 @@ Output:
 The re-ranking list
 The metrics: Recall@1-5,Precision@1-5,NDCG@5,MRR@5
 
-}%
+%}
 load('Covariance')
 Output=[];
 rank=15;
